@@ -6,5 +6,4 @@ class Car {
     fill(255, 0, 0);
     rect(mouseX, height-11, 10, 20);
   }
-  
 }

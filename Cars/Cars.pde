@@ -1,19 +1,34 @@
 float xposCar;
 float yposCar;
-float anchoObs = random(70);
-float altoObs = random(70);
+float anchoObs1 = (70);
+float altoObs1 = (70);
+
+float anchoObs2 = (70);
+float altoObs2 = (70);
+
+float anchoObs3 = (70);
+float altoObs3 = (70);
+
+float anchoObs4 = (70);
+float altoObs4 = (70);
 
 float xposObs1 = random(width);
 float yposObs1 = 0;
+color col1;
 
 float xposObs2 = random(width);
 float yposObs2 = 0;
+color col2;
 
 float xposObs3 = random(width);
 float yposObs3 = 0;
+color col3;
 
 float xposObs4 = random(width);
 float yposObs4 = 0;
+color col4;
+
+boolean gameover = false;
 
 float xspeedObs;
 float yspeedObs1 = random(5);
@@ -29,6 +44,7 @@ obstaculo1 Obs4;
 
 void setup() {  
   size(500, 700);
+  colorMode(RGB);
   myCar = new Car();
   Obs1 = new obstaculo1();
   Obs2 = new obstaculo1();
@@ -38,13 +54,18 @@ void setup() {
 
 void draw() {    
   background(0); 
-  Obs1.dibujarObstaculo1();
-  Obs1.move1();
-  Obs2.dibujarObstaculo2();
-  Obs2.move2();
-  Obs3.dibujarObstaculo3();
-  Obs3.move3();
-  Obs4.dibujarObstaculo4();
-  Obs4.move4();
-  myCar.display();
+
+  if (gameover == false) {
+    Obs1.dibujarObstaculo1();
+    Obs1.move1();
+    Obs2.dibujarObstaculo2();
+    Obs2.move2();
+    Obs3.dibujarObstaculo3();
+    Obs3.move3();
+    Obs4.dibujarObstaculo4();
+    Obs4.move4();
+    myCar.display();
+  } else {
+    println("GAME OVER");
+  }
 }
