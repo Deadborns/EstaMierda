@@ -1,13 +1,14 @@
 
+
 boolean gameover;
 
 PImage GameOver;
 
 void colision(){
- if (myCar.yposCar < mouseX + obstaculo1.yposObs1+altoObs1
-  || myCar.yposCar < mouseX + obstaculo1.yposObs2+altoObs2
-  || myCar.yposCar < mouseX + obstaculo1.yposObs3+altoObs3
-  || myCar.yposCar < mouseX + obstaculo1.yposObs4+altoObs4){
+ if (myCar.yposCar < mouseX + Obs1.yposObs1+Obs1.altoObs1
+  || myCar.yposCar < mouseX + Obs2.yposObs2+Obs2.altoObs2
+  || myCar.yposCar < mouseX + Obs3.yposObs3+Obs3.altoObs3
+  || myCar.yposCar < mouseX + Obs4.yposObs4+Obs4.altoObs4){
    gameover=true;
  }
 }
