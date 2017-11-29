@@ -60,27 +60,9 @@ class obstaculo1 {
     yspeedObs4 = random(15, 20);
   }
 
-  void dibujarObstaculo2() {
+  void dibujarObstaculo(float xposObs, float yposObs, float anchoObs, float altoObs, color col) {
     stroke (255);
-    fill(col2);
-    rect(xposObs2, yposObs2, anchoObs2, altoObs2);
-  }
-
-  void dibujarObstaculo3() {
-    stroke (255);
-    fill(col3);
-    rect(xposObs3, yposObs3, anchoObs3, altoObs3);
-  }
-
-  void dibujarObstaculo4() {
-    stroke (255);
-    fill(col4);
-    rect(xposObs4, yposObs4, anchoObs4, altoObs4);
-  }
-
-  void dibujarObstaculo1() {
-    stroke (255);
-    fill(col1);
-    rect(xposObs1, yposObs1, anchoObs1, altoObs1);
+    fill(col);
+    rect(xposObs, yposObs, anchoObs, altoObs);
   }
 }
