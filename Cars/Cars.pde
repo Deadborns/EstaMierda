@@ -1,42 +1,16 @@
-float xposCar;
-float yposCar;
-float anchoObs1;
-float altoObs1;
-
-float anchoObs2;
-float altoObs2;
-
-float anchoObs3;
-float altoObs3;
-
-float anchoObs4;
-float altoObs4;
-
-float xposObs1;
-float yposObs1;
-color col1;
-
-float xposObs2;
-float yposObs2;
-color col2;
-
-float xposObs3;
-float yposObs3;
-color col3;
-
-float xposObs4;
-float yposObs4;
-color col4;
 
 boolean gameover;
 
-float xspeedObs;
-float yspeedObs1;
-float yspeedObs2;
-float yspeedObs3;
-float yspeedObs4;
-
 PImage GameOver;
+
+void colision(){
+ if (myCar.yposCar < mouseX + obstaculo1.yposObs1+altoObs1
+  || myCar.yposCar < mouseX + obstaculo1.yposObs2+altoObs2
+  || myCar.yposCar < mouseX + obstaculo1.yposObs3+altoObs3
+  || myCar.yposCar < mouseX + obstaculo1.yposObs4+altoObs4){
+   gameover=true;
+ }
+}
 
 Car myCar;
 obstaculo1 Obs1;
@@ -78,7 +52,7 @@ void setup() {
 
 void draw() {    
   background(0); 
-
+  colision();
   if (gameover == false) {
     Obs1.dibujarObstaculo(xposObs1, yposObs1, anchoObs1, altoObs1, col1);
     Obs1.move1();

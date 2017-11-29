@@ -1,7 +1,39 @@
 class obstaculo1 {
-  /*public Obs(float x, float y, float h, float w){
-   
-   }*/
+
+  float xspeedObs;
+  float yspeedObs1;
+  float yspeedObs2;
+  float yspeedObs3;
+  float yspeedObs4;
+
+  float anchoObs1;
+  float altoObs1;
+
+  float anchoObs2;
+  float altoObs2;
+
+  float anchoObs3;
+  float altoObs3;
+
+  float anchoObs4;
+  float altoObs4;
+
+  float xposObs1;
+  float yposObs1;
+  color col1;
+
+  float xposObs2;
+  float yposObs2;
+  color col2;
+
+  float xposObs3;
+  float yposObs3;
+  color col3;
+
+  float xposObs4;
+  float yposObs4;
+  color col4;
+
   void move1() {
     yposObs1 = yposObs1 + yspeedObs1;
     if ((yposObs1 - (altoObs1 + 10)) > height) {
